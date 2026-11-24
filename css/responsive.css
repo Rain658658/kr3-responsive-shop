@@ -27,13 +27,6 @@ main > h1 {
   padding-right: var(--space-md);
 }
 
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000; /* Чтобы шапка перекрывала контент, а не уходила под него */
-  width: 100%;
-}
-
 /* ---------- 2. Шапка + hamburger ---------- */
 .site-header__inner {
   display: flex;
@@ -146,7 +139,7 @@ main > h1 {
 .product-card-image {
   width: 100%;
   height: auto;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
 }
 
