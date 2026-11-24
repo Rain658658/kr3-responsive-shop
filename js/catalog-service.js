@@ -26,10 +26,23 @@ const newProductCard = (product) => {
     price.classList.add('product-card__price')
     price.textContent = `${product.price} руб.`;
     price.style.display = 'block'; 
-
+    
+    
+    const lookBtn = document.createElement('button');
+    lookBtn.className = "button look-product__button";
+    lookBtn.textContent = "Подробнее"
+    lookBtn.addEventListener('click', () => {
+        window.location.href = `product.html?id=${product.article}`; 
+    });
+    
     const orderBtn = document.createElement('button');
     orderBtn.className = "button product-card__button";
     orderBtn.textContent = "Заказать"
+    
+    const buttonContainer = document.createElement('div');
+    buttonContainer.className = "product-card-button-container"
+    buttonContainer.appendChild(lookBtn);
+    buttonContainer.appendChild(orderBtn);
 
     li.appendChild(image);
     li.appendChild(title);
@@ -38,7 +51,7 @@ const newProductCard = (product) => {
     }
     li.appendChild(desc);
     li.appendChild(price);
-    li.appendChild(orderBtn);
+    li.appendChild(buttonContainer);
 
     return li;
 }

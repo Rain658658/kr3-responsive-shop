@@ -1,84 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Учебный интернет-магазин">
-    <meta property="og:description" content="Учебный frontend-проект интернет-магазина.">
-    <meta property="og:image" content="https://username.github.io/kr1-html-css-shop/images/preview.jpg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Учебный интернет-магазин музыкальных инструментов.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Учебный интернет-магазин">
+  <meta property="og:description" content="Учебный frontend-проект интернет-магазина.">
+  <meta property="og:image" content="https://Rain658658.github.io/kr1-html-css-shop/images/preview.jpg">
 
-    <title>Учебный интернет-магазин</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script type="module" src="js/main.js" defer></script>
+  <title>Учебный интернет-магазин</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script type="module" src="js/main.js" defer></script>
 </head>
 <body>
-    <header class="site-header">
-        <div class="site-header__inner">
-            <img class="site-header-logo-img" src="images/СимфонияРазрушения.png" alt="СимфонияРазрушения">
-            <a class="site-header__logo" href="index.html">Магазин "Симфония разрушения"</a>
+    <a class="skip-link" href="#main-content">Перейти к основному содержимому</a>
 
-            <nav class="site-nav" aria-label="Основная навигация">
-            <ul class="site-nav__list">
-                <li class="site-nav__item">
-                <a class="site-nav__link site-nav__link--active" href="index.html">
-                    Главная
-                </a>
-                </li>
-                <li class="site-nav__item">
-                <a class="site-nav__link" href="catalog.html">Каталог</a>
-                </li>
-                <li class="site-nav__item">
-                <a class="site-nav__link" href="contacts.html">Контакты</a>
-                </li>
-                <li class="site-nav__item">
-                <a class="site-nav__link" href="index.html#popular">
-                    Популярные товары
-                </a>
-                </li>
-            </ul>
-            </nav>
+    <header class="site-header">
+    <div class="site-header__inner">
+        <div class="site-header__brand">
+        <img class="site-header-logo-img"
+            src="images/СимфонияРазрушения.png"
+            alt="" width="40" height="40">
+        <a class="site-header__logo" href="index.html">Магазин «Симфония разрушения»</a>
         </div>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+        <label for="nav-toggle" class="nav-toggle-label">
+        <span aria-hidden="true">☰</span>
+        <span>Меню</span>
+        </label>
+
+        <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+            <li class="site-nav__item">
+            <a class="site-nav__link site-nav__link--active" href="index.html">Главная</a>
+            </li>
+            <li class="site-nav__item">
+            <a class="site-nav__link" href="catalog.html">Каталог</a>
+            </li>
+            <li class="site-nav__item">
+            <a class="site-nav__link" href="contacts.html">Контакты</a>
+            </li>
+            <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
+            </li>
+        </ul>
+        </nav>
+    </div>
     </header>
 
-
-    <main>
+    <main id="main-content">
         <section class="hero">
-            <h1>Учебный интернет-магазин</h1>
-            <p>
-                Это стартовая страница учебного frontend-проекта.
-                В дальнейшем на её основе будет разработан многостраничный сайт
-                интернет-магазина или каталога услуг.
-            </p>
-            <a class="button" href="#popular">Перейти к товарам</a>
+        <h1>Учебный интернет-магазин</h1>
+        <p>
+            Это стартовая страница учебного frontend-проекта.
+            В дальнейшем на её основе будет разработан многостраничный сайт
+            интернет-магазина или каталога услуг.
+        </p>
+        <a class="button" href="#popular">Перейти к товарам</a>
         </section>
+
         <section class="section" id="advantages">
-            <h2>Преимущества проекта</h2>
-
-            <ul class="advantages-list">
-                <li>понятная HTML-структура;</li>
-                <li>семантические блоки страницы;</li>
-                <li>подключение внешнего CSS-файла;</li>
-                <li>подготовка к разработке многостраничного сайта.</li>
-            </ul>
+        <h2>Преимущества проекта</h2>
+        <ul class="advantages-list">
+            <li>понятная HTML-структура;</li>
+            <li>семантические блоки страницы;</li>
+            <li>подключение внешнего CSS-файла;</li>
+            <li>подготовка к разработке многостраничного сайта.</li>
+        </ul>
         </section>
-        <section class="section" id="popular">
-            <h2>Популярные товары</h2>
 
-            <ul id="hit-list" class="products-grid" aria-label="Список задач"></ul>
+        <section class="section" id="popular">
+        <h2>Популярные товары</h2>
+        <ul id="hit-list" class="products-grid" aria-label="Популярные товары"></ul>
         </section>
 
         <aside class="aside-info">
-            <h2>Информация для студентов</h2>
-            <p>
-                На следующих практических занятиях этот проект будет расширяться:
-                появятся формы, модальное окно, дополнительные страницы, Flex/Grid,
-                БЭМ-структура и адаптивная версия сайта.
-            </p>
+        <h2>Информация для студентов</h2>
+        <p>
+            На следующих практических занятиях этот проект будет расширяться:
+            появятся формы, модальное окно, дополнительные страницы, Flex/Grid,
+            БЭМ-структура и адаптивная версия сайта.
+        </p>
         </aside>
     </main>
 
-    <footer id="contacts">
+    <footer>
         <p>&copy; 2026 Учебный проект. Все права защищены.</p>
         <p>Дисциплина: Фронтенд и бэкенд разработка</p>
     </footer>
@@ -86,7 +96,7 @@
     <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
     <h2 id="order-dialog-title">Оформление заявки</h2>
 
-    <form class="order-form" id="order-form" action="#" method="post" novalidate>
+    <form class="order-form--dialog" id="order-form" action="#" method="post" novalidate>
         <input id="selected-product" name="selected-product" type="hidden">
 
         <div class="form-field">

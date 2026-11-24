@@ -1,24 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Карточка товара учебного интернет-магазина.">
+  <title>Цифровое пианино WENCAI BL-8802 — Учебный интернет-магазин</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    <header>
-    <nav>
-        
-    </nav>
+  <a class="skip-link" href="#main-content">Перейти к основному содержимому</a>
+
+    <header class="site-header">
+    <div class="site-header__inner">
+      <div class="site-header__brand">
+        <img class="site-header-logo-img"
+            src="images/СимфонияРазрушения.png"
+            alt="" width="40" height="40">
+        <a class="site-header__logo" href="index.html">Магазин «Симфония разрушения»</a>
+      </div>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span aria-hidden="true">☰</span>
+        <span>Меню</span>
+      </label>
+
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="catalog.html">Каталог</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="contacts.html">Контакты</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
     </header>
 
-    <main>
-        
-    </main>
+  <main id="main-content">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a class="breadcrumbs__link" href="index.html">Главная</a>
+      <a class="breadcrumbs__link" href="catalog.html">Каталог</a>
+      <span class="breadcrumbs__current">Товар</span>
+    </nav>
 
-    <footer>
-        
-    </footer>
+    <section class="section">
+      <h1>Цифровое пианино WENCAI BL-8802</h1>
+
+      <div class="product-detail">
+        <!--
+          ВАЖНО: srcset/sizes работают, только если у вас есть несколько размеров картинки.
+          Создайте в images/ три файла: product-1-480.jpg, product-1-640.jpg, product-1-960.jpg
+          (например, через https://squoosh.app). Пока используем существующий images/Синтезатор.jpg.
+        -->
+        <img class="product-detail__image"
+             src="images/Синтезатор.jpg"
+             srcset="images/Синтезатор.jpg 640w"
+             sizes="(max-width: 767px) 100vw, 50vw"
+             alt="Цифровое пианино WENCAI BL-8802 с 88 клавишами"
+             width="640" height="480"
+             loading="lazy"
+             decoding="async">
+
+        <div class="product-detail__info">
+            <div>
+                <p class="product-detail__price">28 990 ₽</p>
+                <p>
+                  WENCAI BL-8802 — цифровое пианино с 88 полноразмерными
+                  взвешенными клавишами. Подходит для обучения и домашних занятий.
+                </p>
+            </div>
+            <a class="button" href="order.html">Заказать</a>
+        </div>
+      </div>
+
+      <h2>Характеристики</h2>
+
+      <div class="table-wrapper">
+        <table class="product-table">
+          <caption>Технические характеристики</caption>
+          <thead>
+            <tr>
+              <th scope="col">Параметр</th>
+              <th scope="col">Значение</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Параметр">Количество клавиш</td>
+              <td data-label="Значение">88</td>
+            </tr>
+            <tr>
+              <td data-label="Параметр">Тип клавиатуры</td>
+              <td data-label="Значение">Полновзвешенная</td>
+            </tr>
+            <tr>
+              <td data-label="Параметр">Полифония</td>
+              <td data-label="Значение">128 голосов</td>
+            </tr>
+            <tr>
+              <td data-label="Параметр">Гарантия</td>
+              <td data-label="Значение">12 месяцев</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+    <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+  </footer>
 </body>
 </html>
